@@ -30,7 +30,6 @@ Smsguard is a tool that uses AI to detect and analyze potential SMS scams. It le
 Create a `.env` file in the root directory and add your API keys:
 
 ```
-OPENAI_API_KEY=your_openai_api_key
 GOOGLE_API_KEY=your_google_api_key
 ```
 
