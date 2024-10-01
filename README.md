@@ -76,7 +76,6 @@ curl -X POST "http://localhost:5000/api" \
     "axios": "^1.7.7",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
-    "openai": "^4.66.1",
     "puppeteer": "^23.4.1",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2"
