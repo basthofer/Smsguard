@@ -1,6 +1,6 @@
-# Smsguard by scamjammers
+# Scambuster by scamjammers
 
-Smsguard is a tool that uses AI to detect and analyze potential SMS scams. It leverages both Node.js and Python to provide a comprehensive solution for SMS analysis.
+Scambuster is a tool that uses AI to detect and analyze potential SMS scams. It leverages both Node.js and Python to provide a comprehensive solution for SMS analysis.
 
 ## Prerequisites
 
@@ -11,8 +11,8 @@ Smsguard is a tool that uses AI to detect and analyze potential SMS scams. It le
 
 1. Clone the repository:
    ```
-   git clone https://github.com/basthofer/Smsguard.git
-   cd Smsguard
+   git clone https://github.com/basthofer/scambuster.git
+   cd scambuster
    ```
 
 2. Install Node.js dependencies:
@@ -22,7 +22,7 @@ Smsguard is a tool that uses AI to detect and analyze potential SMS scams. It le
 
 3. Install Python dependencies:
    ```
-   pip install fastapi google-generative-ai requests uvicorn
+   pip install fastapi google-generativeai requests uvicorn
    ```
 
 ## Configuration
