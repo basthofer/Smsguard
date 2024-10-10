@@ -14,7 +14,7 @@ if not os.path.exists(app.config['UPLOAD_FOLDER']):
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
 
-@app.route('/supersecretkey')
+@app.route('/meow')
 def index():
     images = os.listdir(app.config['UPLOAD_FOLDER'])
     return render_template_string('''
