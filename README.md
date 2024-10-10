@@ -1,6 +1,6 @@
 # Scambuster by scamjammers
 
-Scambuster is a tool that uses AI to detect and analyze potential SMS scams. It leverages both Node.js and Python to provide a comprehensive solution for SMS analysis. This is the backend server/ APIS of scambuster tool
+Scambuster is a tool that uses AI to detect and analyze potential SMS scams. It leverages both Node.js and Python to provide a comprehensive solution for SMS analysis. This is the backend server/ API of scambuster tool.
 
 ## Prerequisites
 
