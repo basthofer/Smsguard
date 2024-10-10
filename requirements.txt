@@ -1,0 +1,6 @@
+FastAPI
+google-generative-ai
+requests
+uvicorn
+flask
+flask_cors
