@@ -36,7 +36,7 @@ VISION_API_KEY=your_vision_key
 
 ## Running the Application
 
-You need to run three separate components:
+You need to run four separate components:
 
 1. Node.js Browser API:
    ```
@@ -55,11 +55,13 @@ You need to run three separate components:
    uvicorn api:app --port 5000
    ```
    This will run on `http://localhost:5000`
+   
 4. Image Detection API:
    ```
    python3 convodetect.py
    ```
    This will run on `http://localhost:3123`
+   
 ## Usage
 
 To analyze an SMS message, send a POST request to the main API:
