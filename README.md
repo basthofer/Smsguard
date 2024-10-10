@@ -1,31 +1,41 @@
-# Scambuster by scamjammers
+# Scambuster by Scamjammers🚫
 
-Scambuster is a tool that uses AI to detect and analyze potential SMS scams. It leverages both Node.js and Python to provide a comprehensive solution for SMS analysis. This is the backend server/ API of scambuster tool.
+Scambuster is a cutting-edge tool that uses AI to detect and analyze potential SMS scams. This backend server/API leverages both Node.js and Python to provide a comprehensive solution for SMS analysis, including the ability to detect scams through both text messages and message screenshots.
 
-## Prerequisites
+## ✨ Features
 
-- Node.js (version 20 or above)
-- Python (version 3.10 or above)
+- **AI-Powered Detection**: 🤖 Utilize advanced algorithms to identify and flag scam messages effectively.
+- **Screenshot Analysis**: 🖼️ Leverage Optical Character Recognition (OCR) to detect scams from SMS screenshots.
+- **Real-Time Analysis**: ⏱️ Receive immediate feedback on the legitimacy of messages.
 
-## Installation
+## 📋 Prerequisites
 
-1. Clone the repository:
-   ```
+Ensure you have the following before getting started:
+
+- **Node.js**: Version 20 or above
+- **Python**: Version 3.10 or above
+
+## 🚀 Installation
+
+Follow these steps to install Scambuster:
+
+1. **Clone the Repository**:
+   ```bash
    git clone https://github.com/basthofer/scambuster.git
    cd scambuster
    ```
 
-2. Install Node.js dependencies:
-   ```
+2. **Install Node.js Dependencies**:
+   ```bash
    npm install
    ```
 
-3. Install Python dependencies:
-   ```
-   pip install fastapi google-generativeai requests uvicorn
+3. **Install Python Dependencies**:
+   ```bash
+   pip install fastapi google-generativeai requests uvicorn flask flask_cors
    ```
 
-## Configuration
+## ⚙️ Configuration
 
 Create a `.env` file in the root directory and add your API keys:
 
@@ -34,35 +44,35 @@ GEMINI_API_KEY=your_google_api_key
 VISION_API_KEY=your_vision_key
 ```
 
-## Running the Application
+## 🚦 Running the Application
 
-You need to run four separate components:
+Run the following components in separate terminal windows:
 
-1. Node.js Browser API:
-   ```
+1. **Node.js Browser API**:
+   ```bash
    node browserapi.js
    ```
-   This will run on `http://localhost:3000`
+   - Accessible at `http://localhost:3000`
 
-2. Python SMS API:
-   ```
+2. **Python SMS API**:
+   ```bash
    uvicorn smsapi:app
    ```
-   This will run on `http://localhost:8000`
+   - Accessible at `http://localhost:8000`
 
-3. Main API:
-   ```
+3. **Main API**:
+   ```bash
    uvicorn api:app --port 5000
    ```
-   This will run on `http://localhost:5000`
+   - Accessible at `http://localhost:5000`
    
-4. Image Detection API:
-   ```
+4. **Image Detection API**:
+   ```bash
    python3 convodetect.py
    ```
-   This will run on `http://localhost:3123`
-   
-## Usage
+   - Accessible at `http://localhost:3123`
+
+## 📚 Usage
 
 To analyze an SMS message, send a POST request to the main API:
 
@@ -71,14 +81,16 @@ curl -X POST "http://localhost:5000/api" \
      -H "Content-Type: application/json" \
      -d '{"message": "Deal of the Day! Your NIRO loan of Rs. 336000 is ready! Tap into the best EMIs now. Claim your funds here- http://f49.bz/mKfvum - Finbud"}'
 ```
-To analyze an Image , send a POST request to the convodetect/image API:
+
+To analyze an image, send a POST request to the Image Detection API:
 
 ```bash
 curl -X POST "http://localhost:3123/image" \
      -H "Content-Type: application/json" \
      -d '{"image_url": "https://i.postimg.cc/k506WBfT/amy-is-offering-me-a-job-as-a-music-promotion-optimizer-i-v0-amklp5ya6ntd1.webp"}'
 ```
-## Dependencies
+
+## 📦 Dependencies
 
 ### Node.js Dependencies
 
@@ -94,6 +106,7 @@ curl -X POST "http://localhost:3123/image" \
     "puppeteer-extra-plugin-stealth": "^2.11.2"
   }
 }
+
 ```
 
 ### Python Dependencies
@@ -105,4 +118,6 @@ curl -X POST "http://localhost:3123/image" \
 - flask
 - flask_cors
 
+## 🤝 Contributing
 
+We welcome contributions to enhance Scambuster! Please feel free to open an issue or submit a pull request with your suggestions and improvements.
